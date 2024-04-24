@@ -3,6 +3,7 @@
   "version": "2.0.5",
   "description": "",
   "scripts": {
+    "prepare" : "npm run build",
     "build": "rete build -c rete.config.ts",
     "lint": "rete lint",
     "doc": "rete doc --entries src/index.tsx"
