@@ -18,7 +18,7 @@
   "homepage": "https://retejs.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/retejs/react-plugin.git"
+    "url": "https://github.com/AndreMarthinsen/react-plugin.git"
   },
   "bugs": {
     "url": "https://github.com/retejs/react-plugin/issues"
