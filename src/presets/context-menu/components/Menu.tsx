@@ -27,9 +27,16 @@ export function Menu(props: Props) {
   const [hide, cancelHide] = useDebounce(props.onHide, props.delay)
   const [filter, setFilter] = React.useState('')
   const filterRegexp = new RegExp(filter, 'i')
-  const filteredList = props.items.filter(item => (
-    item.label.match(filterRegexp)
-  ))
+  const filteredList = (filter==='')? props.items
+    .flatMap((item)=>{
+      if (item.subitems) {
+        return item.subitems
+      }
+      return item
+    })
+    .filter(item => (
+      item.label.match(filterRegexp)
+    )) : props.items
   const Component = props.components?.main?.() || Styles
   const Common = props.components?.common?.() || CommonStyle
 
